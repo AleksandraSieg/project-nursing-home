@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}  <!-- Dodaj to, aby załadować tagi statyczne -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="{% static 'css/output.css' %}" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-6">
+        <h1 class="text-4xl font-bold text-center text-gray-900 mb-10">Dashboard</h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Kafelek Report -->
+            <a href="{% url 'report_list' %}" class="block bg-white p-6 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300">
+                <div class="text-center">
+                    <h2 class="text-2xl font-bold text-gray-800">Reports</h2>
+                    <p class="text-gray-600 mt-2">View and manage reports.</p>
+                </div>
+            </a>
+
+            <!-- Kafelek Residents -->
+            <a href="{% url 'resident_list' %}" class="block bg-white p-6 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300">
+                <div class="text-center">
+                    <h2 class="text-2xl font-bold text-gray-800">Residents</h2>
+                    <p class="text-gray-600 mt-2">Manage resident information.</p>
+                </div>
+            </a>
+
+            <!-- Kafelek Medications -->
+            <a href="{% url 'medication_list' %}" class="block bg-white p-6 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300">
+                <div class="text-center">
+                    <h2 class="text-2xl font-bold text-gray-800">Medications</h2>
+                    <p class="text-gray-600 mt-2">Manage medication schedules.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

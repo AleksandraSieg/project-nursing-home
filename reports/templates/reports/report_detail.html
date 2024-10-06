@@ -1,0 +1,5 @@
+<h1>Report from {{ report.date }} by {{report.staff_signature}}</h1>
+<p>{{ report.note }}</p>
+<a href="{% url 'report_update' report.pk %}">Edit</a>
+<a href="{% url 'report_delete' report.pk %}">Delete</a>
+<a href="{% url 'report_list' %}">Back to list</a>

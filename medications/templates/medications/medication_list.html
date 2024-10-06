@@ -1,0 +1,11 @@
+<h1>Medications</h1>
+<a href="{% url 'medication_create' %}">Add New Medication</a>
+<ul>
+  {% for medication in medications %}
+    <li>
+      <a href="{% url 'medication_detail' medication.pk %}">{{ medication.trade_name }}</a>
+      (<a href="{% url 'medication_update' medication.pk %}">Edit</a>)
+      (<a href="{% url 'medication_delete' medication.pk %}">Delete</a>)
+    </li>
+  {% endfor %}
+</ul>

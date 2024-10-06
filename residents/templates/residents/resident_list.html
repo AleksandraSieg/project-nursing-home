@@ -1,0 +1,11 @@
+<h1>Residents</h1>
+<a href="{% url 'resident_create' %}">Add New Resident</a>
+<ul>
+  {% for resident in residents %}
+    <li>
+      <a href="{% url 'resident_detail' resident.pk %}">{{ resident.first_name }} {{ resident.last_name }}</a>
+      (<a href="{% url 'resident_update' resident.pk %}">Edit</a>)
+      (<a href="{% url 'resident_delete' resident.pk %}">Delete</a>)
+    </li>
+  {% endfor %}
+</ul>

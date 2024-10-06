@@ -1,0 +1,7 @@
+<h2>Delete Medication Entry</h2>
+<p>Are you sure you want to delete {{ entry.medication.trade_name }} ({{ entry.time_of_day }}) for {{ entry.medication_schedule.resident.first_name }} {{ entry.medication_schedule.resident.last_name }}?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm</button>
+</form>
+<a href="{% url 'resident_detail' entry.medication_schedule.resident.id %}">Cancel</a>

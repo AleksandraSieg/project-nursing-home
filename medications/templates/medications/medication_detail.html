@@ -1,0 +1,6 @@
+<h1>{{ medication.name }}</h1>
+<p>Trade Name: {{ medication.trade_name }}</p>
+<p>International Latin Name: {{ medication.international_latin_name }}</p>
+<a href="{% url 'medication_update' medication.pk %}">Edit</a>
+<a href="{% url 'medication_delete' medication.pk %}">Delete</a>
+<a href="{% url 'medication_list' %}">Back to list</a>

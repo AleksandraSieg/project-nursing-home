@@ -1,0 +1,7 @@
+<h2>Add Medication for {{ resident.first_name }} {{ resident.last_name }}</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+<a href="{% url 'resident_detail' resident.id %}">Cancel</a>
