@@ -1,4 +1,7 @@
 <h1>Reports</h1>
+
+<a href="{% url 'index' %}" class="block mb-4 text-blue-600 hover:underline">← Back to Dashboard</a>
+
 <a href="{% url 'report_create' %}">Add New Report</a>
 <ul>
     {% for report in reports %}

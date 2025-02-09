@@ -1,4 +1,5 @@
 <h2>Add Medication for {{ resident.first_name }} {{ resident.last_name }}</h2>
+<a href="{% url 'index' %}" class="block mb-4 text-blue-600 hover:underline">← Back to Dashboard</a>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}

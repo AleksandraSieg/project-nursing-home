@@ -40,8 +40,12 @@ INSTALLED_APPS = [
     'appdom',
     'residents',
     'medications',
-    'reports'
+    'reports',
+    'tailwind',
+    'theme',  # <-- Nowa aplikacja dla Tailwind CSS
 ]
+
+TAILWIND_APP_NAME = 'theme'  # Nazwa aplikacji Tailwind
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
